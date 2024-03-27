@@ -1,2 +1,3 @@
-import { Greet } from "./Data/data.js";
-Greet();
+import { initGame } from "./Data/data.js";
+
+console.log(initGame());
