@@ -1,3 +1,26 @@
 body {
   background-color: #302e2b;
+  min-height: 100dvh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#root {
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+  margin: auto;
+}
+.squareRow {
+  display: flex;
+}
+.white {
+  background: #eeeed2;
+}
+.black {
+  background: #769656;
+}
+.square {
+  width: 80px;
+  height: 80px;
 }
