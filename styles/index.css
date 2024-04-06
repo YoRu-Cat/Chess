@@ -21,3 +21,6 @@ body {
 .piece {
   width: 100%;
 }
+.piece:hover {
+  cursor: grab;
+}

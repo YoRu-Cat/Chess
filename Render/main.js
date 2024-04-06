@@ -1,6 +1,5 @@
 import * as piece from "../Data/pieces.js";
-
-const ROOT_DIV = document.getElementById("root");
+import { ROOT_DIV } from "../Helper/constants.js";
 
 // use to render pieces on board
 function pieceRender(data) {
