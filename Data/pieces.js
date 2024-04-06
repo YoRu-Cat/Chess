@@ -5,6 +5,36 @@ function blackPawn(currentPosition) {
     img: "images/black/pawn.png",
   };
 }
+function blackRook(currentPosition) {
+  return {
+    currentPosition,
+    img: "images/black/rook.png",
+  };
+}
+function blackKnight(currentPosition) {
+  return {
+    currentPosition,
+    img: "images/black/knight.png",
+  };
+}
+function blackBishop(currentPosition) {
+  return {
+    currentPosition,
+    img: "images/black/bishop.png",
+  };
+}
+function blackQueen(currentPosition) {
+  return {
+    currentPosition,
+    img: "images/black/queen.png",
+  };
+}
+function blackKing(currentPosition) {
+  return {
+    currentPosition,
+    img: "images/black/king.png",
+  };
+}
 
 // white pieces
 function whitePawn(currentPosition) {
@@ -23,19 +53,38 @@ function whiteRook(currentPosition) {
 function whiteKnight(currentPosition) {
   return {
     currentPosition,
-    img: "images/white/rook.png",
+    img: "images/white/knight.png",
   };
 }
-function whiteRook(currentPosition) {
+function whiteBishop(currentPosition) {
   return {
     currentPosition,
-    img: "images/white/rook.png",
+    img: "images/white/bishop.png",
   };
 }
-function whiteRook(currentPosition) {
+function whiteQueen(currentPosition) {
   return {
     currentPosition,
-    img: "images/white/rook.png",
+    img: "images/white/queen.png",
   };
 }
-export { blackPawn, whitePawn };
+function whiteKing(currentPosition) {
+  return {
+    currentPosition,
+    img: "images/white/king.png",
+  };
+}
+export {
+  blackPawn,
+  blackBishop,
+  blackKing,
+  blackKnight,
+  blackQueen,
+  blackRook,
+  whitePawn,
+  whiteBishop,
+  whiteKing,
+  whiteKnight,
+  whiteQueen,
+  whiteRook,
+};
