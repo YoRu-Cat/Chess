@@ -5,12 +5,6 @@ body {
   justify-content: center;
   align-items: center;
 }
-#root {
-  display: flex;
-  flex-direction: column;
-  width: fit-content;
-  margin: auto;
-}
 .squareRow {
   display: flex;
 }
@@ -23,4 +17,7 @@ body {
 .square {
   width: 80px;
   height: 80px;
+}
+.piece {
+  width: 100%;
 }
