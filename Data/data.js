@@ -1,12 +1,15 @@
-function Greet() {
-  alert("Hello Nigga");
-}
+import { renderHighlight } from "../Render/main.js";
 
 // for each square
-
 function Square(color, id, piece) {
-  return { color, id, piece };
+  const highlight = function () {
+    renderHighlight(this.id);
+    this.highlighted = true;
+  };
+
+  return { color, id, piece, highlight };
 }
+
 function SquareRow(rowId) {
   const squareRow = [];
   const abcd = ["a", "b", "c", "d", "e", "f", "g", "h"];

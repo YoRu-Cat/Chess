@@ -1,5 +1,6 @@
 import * as piece from "../Data/pieces.js";
 import { ROOT_DIV } from "../Helper/constants.js";
+import { globalState } from "../index.js";
 
 // use to render pieces on board
 function pieceRender(data) {
@@ -88,4 +89,21 @@ function initGameRender(data) {
   pieceRender(data);
 }
 
-export { initGameRender };
+// render highlight circle
+function renderHighlight(squareId) {
+  const highlightSpan = document.createElement("span");
+  highlightSpan.classList.add("highlight");
+  document.getElementById(squareId).appendChild(highlightSpan);
+}
+
+// clear all highlights from the board
+function clearHighlight() {
+  const flatData = globalState.flat();
+  flatData.forEach((el) => {
+    if (el.highlighted) {
+      document.getElementById(el.id).innerHTML = "";
+    }
+  });
+}
+
+export { initGameRender, renderHighlight, clearHighlight };
