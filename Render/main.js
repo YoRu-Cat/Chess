@@ -2,6 +2,20 @@ import * as piece from "../Data/pieces.js";
 import { ROOT_DIV } from "../Helper/constants.js";
 import { globalState } from "../index.js";
 
+function selfHighlight(piece) {
+  document
+    .getElementById(piece.currentPosition)
+    .classList.add("highlightYellow");
+}
+
+function clearPreviousSelfHighlight(piece) {
+  if (piece) {
+    document
+      .getElementById(piece.currentPosition)
+      .classList.remove("highlightYellow");
+  }
+}
+
 // use to render pieces on board
 function pieceRender(data) {
   data.forEach((row) => {
@@ -102,8 +116,15 @@ function clearHighlight() {
   flatData.forEach((el) => {
     if (el.highlighted) {
       document.getElementById(el.id).innerHTML = "";
+      el.highlighted = false;
     }
   });
 }
 
-export { initGameRender, renderHighlight, clearHighlight };
+export {
+  initGameRender,
+  renderHighlight,
+  clearHighlight,
+  selfHighlight,
+  clearPreviousSelfHighlight,
+};

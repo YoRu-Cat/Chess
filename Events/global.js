@@ -1,13 +1,20 @@
 import { ROOT_DIV } from "../Helper/constants.js";
 import { globalState } from "../index.js";
-import { renderHighlight } from "../Render/main.js";
 import { clearHighlight } from "../Render/main.js";
+import { selfHighlight } from "../Render/main.js";
+import { clearPreviousSelfHighlight } from "../Render/main.js";
 
 // highlight or not
-let highlightState = false;
+// let highlightState = false;
+
+// current self-highlighted square state
+let selfHighlightState = null;
 
 function whitePawnClick({ piece }) {
-  const flatArray = globalState.flat();
+  clearPreviousSelfHighlight(selfHighlightState);
+  selfHighlight(piece);
+  selfHighlightState = piece;
+  // const flatArray = globalState.flat();
   const currentPos = piece.currentPosition;
   // on initial position
   if (piece.currentPosition[1] == "2") {
